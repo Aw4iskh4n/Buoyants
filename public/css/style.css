@@ -76,7 +76,7 @@ header {
     color: #3a8bfd;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 880px) {
     .nav-links {
         position: fixed;
         padding: 50px;
@@ -90,6 +90,7 @@ header {
         bottom: 0;
         z-index: 1;
         transition: right 0.3s;
+        display: flex;
     }
 
     .nav-links li {
@@ -99,6 +100,7 @@ header {
     .nav-links.nav-active {
         right: 0;
         top: 90px;
+        
     }
 
     .hamburger {
@@ -137,7 +139,6 @@ header {
     gap: 150px;
     padding: 50px 90px;
     min-height: 100%;
-    height: 100vh;
     max-height: 1080px;
 }
 
@@ -211,6 +212,11 @@ header {
     .boxes {
         justify-content: center;
     }
+
+    .contact-section .text-box h2 {
+        text-align: center;
+    }
+    
 }
 
 @media (max-width: 940px) {
@@ -234,11 +240,60 @@ header {
         position: unset !important;
     }
 
+    .hero-image img {
+        width: 80vw;
+        
+    }
+
+    .expertise-section .inner-expertise h2 {
+        background: linear-gradient(90deg, #f1f1f1 0%, #2826328c 50%);
+        background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    }
+
+
+    .hero{
+        overflow: hidden;
+    }
+
+    
+}
+
+@media (max-width: 450px) {
+    
+    .expertise-section .inner-expertise h2 {
+        background: linear-gradient(90deg, #f1f1f1 0%, #2826328c 70%);
+        background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    }
 }
 
 @media (max-width: 500px) {
     .right-div> :nth-child(2) {
         margin-top: 40px;
+    }
+
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .hero-image img {
+        display: none;
+    }
+
+    .contact-section {
+        padding: 100px 30px !important;
+    }
+}
+
+@media (max-width : 400px ){
+    .site-footer .footer-content {
+        justify-content: space-between;
     }
 }
 
@@ -249,7 +304,7 @@ header {
     gap: 50px;
     width: calc(100vw - (100vw - 100%));
     padding: 50px 90px;
-    height: 900px;
+    height: 910px;
     overflow-x: hidden;
     overflow-y: visible;
     box-sizing: border-box;
@@ -272,6 +327,7 @@ header {
     justify-content: space-between;
     position: relative;
     max-width: 650px;
+    width: 75vw;
 }
 
 .right-div>div:nth-child(1),
@@ -517,9 +573,6 @@ header {
 
 /* Default styles for mobile devices (less than 500px) */
 @media (min-width: 500px) and (max-width: 850px) {
-    .team-container {
-        /* flex-wrap and justify-content remain the same */
-    }
 
     .team-member {
         width: calc(50% - 10px);
@@ -554,7 +607,7 @@ header {
 .contact-section {
     display: flex;
     justify-content: center;
-    padding: 50px 100px;
+    padding: 100px;
     gap: 50px;
 }
 
