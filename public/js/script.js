@@ -21,4 +21,17 @@ window.onload = function() {
 };
 
 
+const links = document.querySelectorAll('.nav-links a');
 
+    // Function to apply CSS property
+    function hideNavLinks() {
+        // Assuming .nav-links is the parent you want to modify
+        // Direct parent in this case is .nav-links itself
+        navLinks.classList.remove('nav-active'); // Move the .nav-links out of view
+        hamburger.classList.remove('toggle');
+    }
+
+    // Add click event listener to each link within .nav-links
+    links.forEach(link => {
+        link.addEventListener('click', hideNavLinks);
+    });
